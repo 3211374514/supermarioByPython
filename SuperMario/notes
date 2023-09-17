@@ -1,0 +1,26 @@
+1.File "D:\pytho\SuperMario\source\tools.py", line 23, in run
+    self.screen.fill((random.randint(0,255),random.randint(0,255),random.randint(0,255)))#fill油漆桶随机填充颜色
+pygame.error: display Surface quit
+原因：tools.py中__init__写成了__int__
+class Game:
+    def __init__(self):
+        self.screen = pygame.display.get_surface()
+        self.clock = pygame.time.Clock()
+
+
+2.pygame.Surface.blit()  —  将一个图像（Surface 对象）绘制到另一个图像上方
+pygame.Surface.fill()  —  使用纯色填充 Surface 对象
+pygame.sprite.Sprite 是 pygame 中用来实现精灵的一个类，在使用时并不需要对它实例化，只需要继承它，然后按需写出自己的类，因此非常简单、使用。
+key.get_pressed()
+返回的是一个布尔值列表，通过True记录该键被按下了，False 表示没有
+pygame.time.get_ticks()
+获取以毫秒为单位的时间
+#检查一个精灵 是否 与精灵组里任意一个精灵有碰撞
+ground_item = pygame.sprite.spritecollideany(self.player,self.ground_items_group)
+
+
+
+
+
+
+
